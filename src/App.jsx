@@ -46,17 +46,19 @@ sagaMiddleware.run(rootSaga);
 
 const history = syncHistoryWithStore(hashHistory, store);
 
+const AppComponent = <Provider store={store}>
+  <MuiThemeProvider muiTheme={getMuiTheme(baseStyle)}>
+    <StyleRoot>
+      <Router history={history}>
+        <Route path="/" component={HeaderContainer}>
+          <IndexRoute component={LoginContainer}/>
+        </Route>
+      </Router>
+    </StyleRoot>
+  </MuiThemeProvider>
+</Provider>;
+
 ReactDOM.render(
-  <Provider store={store}>
-    <MuiThemeProvider muiTheme={getMuiTheme(baseStyle)}>
-      <StyleRoot>
-        <Router history={history}>
-          <Route path="/" component={HeaderContainer}>
-            <IndexRoute component={LoginContainer}/>
-          </Route>
-        </Router>
-      </StyleRoot>
-    </MuiThemeProvider>
-  </Provider>,
+  AppComponent,
   document.getElementById('root')
 );

@@ -12,7 +12,7 @@ module.exports = {
   entry: {
     app: [
       // babel-polyfill is the error 'Uncaught ReferenceError: regeneratorRuntime is not defined from ?'
-      'babel-polyfill', './App.js'
+      'babel-polyfill', './App.jsx'
     ]
   },
   output: {
