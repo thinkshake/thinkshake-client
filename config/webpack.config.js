@@ -8,7 +8,7 @@ const PRODUCTION = process.env.NODE_ENV === 'production';
 // TODO: common.js も作る
 
 module.exports = {
-  context: path.join(__dirname, 'src'),
+  context: path.join(__dirname, '../src'),
   entry: {
     app: [
       // babel-polyfill is the error 'Uncaught ReferenceError: regeneratorRuntime is not defined from ?'
@@ -16,7 +16,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '../dist'),
 
     // TODO: production は minify されるため .min.js にする必要がある
     filename: '[name].bundle.js',
