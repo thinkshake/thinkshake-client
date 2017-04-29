@@ -1,8 +1,6 @@
-// Package
 import { connect } from 'react-redux';
-// import { browserHistory } from 'react-router';
-// Components
-import Login from '../components/pages/Login';
+
+import App from '../components/layout/App';
 
 const mapStateToProps = (state) => {
   return {};
@@ -12,9 +10,9 @@ const mapDispatchToProps = (dispatch) => {
   return {};
 };
 
-const LoginContainer = connect(
+const AppContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Login);
+)(App);
 
-export default LoginContainer;
+export default AppContainer;
