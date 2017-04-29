@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
-class App extends React.Component {
+class Main extends React.Component {
   render() {
     return (
       <div>
@@ -14,4 +14,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Main;

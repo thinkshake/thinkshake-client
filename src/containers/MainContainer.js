@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import App from '../components/layout/App';
+import Main from '../components/layout/Main';
 
 const mapStateToProps = (state) => {
   return {};
@@ -10,9 +10,9 @@ const mapDispatchToProps = (dispatch) => {
   return {};
 };
 
-const AppContainer = connect(
+const MainContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(App);
+)(Main);
 
-export default AppContainer;
+export default MainContainer;
