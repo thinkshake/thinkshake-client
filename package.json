@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "start": "$(npm bin)/webpack-dev-server --config ./config/webpack.config.js",
-    "build": "$(npm bin)/webpack -p --config ./config/webpack.config.js",
+    "start": "$(npm bin)/webpack-dev-server --host 0.0.0.0 --config ./config/webpack.config.js",
+    "build": "npm test && $(npm bin)/webpack -p --config ./config/webpack.config.js",
     "pretest": "npm run pretest:lint && npm run pretest:typecheck",
     "pretest:lint": "$(npm bin)/eslint src",
     "pretest:typecheck": "$(npm bin)/flow",

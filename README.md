@@ -18,19 +18,33 @@ This is the client for ThinkShake.
 - Chrome - Latest Version
 - Safari - Latest Version
 
-## Install
-### Node Modules
+## Setup
+
+### On local
+#### Install libraries
 ```npm install```
 
-## Build
-```npm build```
+#### Build for Production
+```npm run build```
 
-## Develop
+#### Start dev server to develop
 ```npm start```
+[ローカル環境](http://localhost:5001)
 
-http://localhost:5001
-
-## Test
+#### Test
 ```npm test```
+
+### Docker
+
+#### Create docker image on local
+```docker build -t thinkshake/client .```
+
+#### Run container
+```docker run --name thinkshake-client -d -itv $(pwd):/srv/thinkshake-client -p 5001:5001 thinkshake/client /bin/bash```
+
+**Please make sure that your dev path is shared in Docker**
+
+#### Login container
+```docker exec -it thinkshake-client /bin/bash```
 
 ## Licence
