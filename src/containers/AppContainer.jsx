@@ -8,12 +8,13 @@ import NotFoundPage from '../components/pages/NotFoundPage';
 import MainContainer from './MainContainer';
 import HomeContainer from './HomeContainer';
 import LoginContainer from './LoginContainer';
+import ProjectContainer from './ProjectContainer'
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { StyleRoot } from 'radium';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import { baseStyle } from '../components/common/baseStyle';
+import { baseStyle } from '../components/styles/baseStyle';
 
 injectTapEventPlugin();
 
@@ -37,6 +38,7 @@ class AppContainer extends React.Component {
             <Router history={history}>
               <Route path='/' component={MainContainer}>
                 <IndexRoute component={HomeContainer}/>
+                <Route path='/project' component={ProjectContainer}/>
                 <Route path='*' component={NotFoundPage}/>
               </Route>
             </Router>

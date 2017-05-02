@@ -8,7 +8,7 @@ const Image = props => {
   } = props;
 
   return (
-    <img alt={alt} {...otherProps} />
+    <img alt={alt} style={{width:'100%'}} {...otherProps} />
   );
 };
 

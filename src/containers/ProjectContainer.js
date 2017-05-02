@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import HomePage from "../components/pages/HomePage";
+import ProjectPage from "../components/pages/ProjectPage";
 
 const mapStateToProps = (state) => {
   return {};
@@ -10,9 +10,9 @@ const mapDispatchToProps = (dispatch) => {
   return {};
 };
 
-const HomeContainer = connect(
+const ProjectContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(HomePage);
+)(ProjectPage);
 
-export default HomeContainer;
+export default ProjectContainer;
