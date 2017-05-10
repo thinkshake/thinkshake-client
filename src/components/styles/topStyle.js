@@ -1,5 +1,3 @@
-import { palette } from '../styles/palette';
-
 export const topStyle = {
   chipDiv: {
     width: '80%',

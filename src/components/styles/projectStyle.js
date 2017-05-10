@@ -1,5 +1,3 @@
-import { palette } from '../styles/palette';
-
 export const projectStyle = {
   base: {
     width: '100%',

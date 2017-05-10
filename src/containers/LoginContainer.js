@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 // Components
 import Login from '../components/pages/Login';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = () => {
   return {};
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = () => {
   return {};
 };
 

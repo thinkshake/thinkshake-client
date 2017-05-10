@@ -2,11 +2,11 @@ import { connect } from "react-redux";
 
 import ProjectPage from "../components/pages/ProjectPage";
 
-const mapStateToProps = (state) => {
+const mapStateToProps = () => {
   return {};
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = () => {
   return {};
 };
 
