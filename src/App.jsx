@@ -1,3 +1,5 @@
+/* @flow */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import { browserHistory, hashHistory } from 'react-router';

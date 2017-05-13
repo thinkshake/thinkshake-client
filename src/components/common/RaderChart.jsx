@@ -1,3 +1,5 @@
+/* @flow */
+
 // Package
 import React, { PropTypes } from 'react';
 import { Radar } from 'react-chartjs-2';

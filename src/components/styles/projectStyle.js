@@ -1,3 +1,5 @@
+/* @flow */
+
 export const projectStyle = {
   base: {
     width: '100%',

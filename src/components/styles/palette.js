@@ -1,3 +1,5 @@
+/* @flow */
+
 export const palette = {
     primary1Color: '#414141',
     primary2Color: '#E65100',

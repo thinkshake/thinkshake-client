@@ -1,3 +1,5 @@
+/* @flow */
+
 export const projectCardStyle = {
   base: {
     width: '95%',

@@ -1,7 +1,9 @@
+/* @flow */
+
 // Package
 import React from 'react';
 
-const Image = props => {
+const Image = (props: Object) => {
   const {
     alt,
     ...otherProps,

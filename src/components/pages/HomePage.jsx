@@ -1,3 +1,5 @@
+/* @flow */
+
 import React from "react";
 import SwipeableViews from 'react-swipeable-views';
 // Components
@@ -12,14 +14,16 @@ import { mergeStyle as m } from '../styles/mergeStyle';
 import { homeStyle as style } from '../styles/homeStyle';
 
 class HomePage extends React.Component {
-  constructor(props) {
+  state: Object;
+
+  constructor(props: Object) {
     super(props);
     this.state = {
       slideIndex: 0,
     };
   }
 
-  handleChange = (value) => {
+  handleChange = (value: number) => {
     this.setState({
       slideIndex: value,
     });

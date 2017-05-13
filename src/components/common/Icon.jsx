@@ -1,3 +1,5 @@
+/* @flow */
+
 // Package
 import React from 'react';
 // Styles

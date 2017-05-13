@@ -1,3 +1,5 @@
+/* @flow */
+
 // import { createAction } from 'redux-actions';
 // import { hashHistory } from 'react-router';
 // // import { browserHistory, hashHistory } from 'react-router';
@@ -43,15 +45,8 @@
 // };
 
 
-
-
-
-
-export function* rootSaga() {
+export function* rootSaga(): Generator<*, *, *> {
 }
-
-
-
 
 
 const initialState = {
@@ -62,7 +57,20 @@ const initialState = {
   topicId: '',
 };
 
-export const utilReducer = (state = initialState, action) => {
+type LoginState = {
+  path: string,
+  session: boolean,
+  title: string,
+  tabValue: string,
+  topicId: string
+};
+
+type LoginAction = {
+  type: string,
+  payload: string
+}
+
+export const utilReducer = (state: LoginState = initialState, action: LoginAction) => {
   switch (action.type) {
 
     case 'locate': {

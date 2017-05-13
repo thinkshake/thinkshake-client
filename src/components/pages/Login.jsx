@@ -1,3 +1,5 @@
+/* @flow */
+
 // Package
 // import React, { PropTypes } from 'react';
 import React from 'react';
@@ -18,15 +20,15 @@ export default class Login extends React.Component {
     toSignIn: false,
     buttonLabel: '新規登録はこちら',
   };
-  changeLocalEmail = (event) => {
+  changeLocalEmail = (event: Object) => {
     event.preventDefault();
     this.setState({ localEmail: event.target.value })
   };
-  changeLocalPassword = (event) => {
+  changeLocalPassword = (event: Object) => {
     event.preventDefault();
     this.setState({ localPassword: event.target.value })
   };
-  changeLocalUserName = (event) => {
+  changeLocalUserName = (event: Object) => {
     event.preventDefault();
     this.setState({ localUserName: event.target.value })
   };

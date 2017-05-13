@@ -1,3 +1,5 @@
+/* @flow */
+
 import React from "react";
 // Components
 import Image from '../common/Image';

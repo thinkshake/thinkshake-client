@@ -1,3 +1,5 @@
+/* @flow */
+
 import React from "react";
 // Components
 import RaderChart from '../common/RaderChart';

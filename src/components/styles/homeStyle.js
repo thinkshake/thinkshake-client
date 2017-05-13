@@ -1,3 +1,5 @@
+/* @flow */
+
 export const homeStyle = {
   headline: {
     fontSize: 24,

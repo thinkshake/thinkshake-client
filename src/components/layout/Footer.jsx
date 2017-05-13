@@ -1,3 +1,5 @@
+/* @flow */
+
 import React from "react";
 // UI
 import Paper from 'material-ui/Paper';
@@ -10,8 +12,9 @@ import { mergeStyle as m } from '../styles/mergeStyle';
 import { footerStyle as style } from '../styles/footerStyle';
 
 class Footer extends React.Component {
+  state: Object;
 
-  constructor(props) {
+  constructor(props: Object) {
     super(props);
     this.state = {open: false};
   }

@@ -1,3 +1,5 @@
+/* @flow */
+
 import { palette } from './palette';
 
 export const baseStyle = {

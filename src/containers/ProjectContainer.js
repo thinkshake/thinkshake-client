@@ -1,3 +1,5 @@
+/* @flow */
+
 import { connect } from "react-redux";
 
 import ProjectPage from "../components/pages/ProjectPage";

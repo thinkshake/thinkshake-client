@@ -1,3 +1,5 @@
+/* @flow */
+
 import { palette } from '../styles/palette';
 
 export const iconStyle = {
