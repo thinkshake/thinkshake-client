@@ -4,12 +4,15 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import createLogger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
-// import utilReducer from './reducers/utilReducer';
-// import rootSaga from './sagas/rootSaga';
 import {rootSaga, utilReducer} from './modules/login';
+import { topReducer } from './modules/top'
+import { topicReducer } from './modules/topic'
+import { recommendReducer } from './modules/recommend'
 
 const reducer = combineReducers({
-  utilReducer,
+  topReducer,
+  topicReducer,
+  recommendReducer,
   routing: routerReducer,
 });
 const sagaMiddleware = createSagaMiddleware();

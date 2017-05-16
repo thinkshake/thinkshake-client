@@ -10,7 +10,7 @@ export const footerStyle = {
     width: '100%',
     height: '50px',
     margin: '0 auto',
-    backgroundColor: palette.navColor,
+    backgroundColor: palette.primary3Color,
     display: 'flex',
     flexFlow: 'raw nowrap',
     justifyContent: 'center',

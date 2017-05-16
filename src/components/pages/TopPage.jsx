@@ -31,7 +31,7 @@ const chartData = {
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(255,99,132,1)',
-      data: [55, 40, 62, 30, 25, 30]
+      data: [60, 60, 60, 60, 60, 60]
     }
   ],
 };
@@ -40,7 +40,7 @@ const chartOptions = {
     position: 'top',
   },
   title: {
-    display: true,
+    display: false,
     text: 'Chart.js Radar Chart',
   },
   scale: {
@@ -52,9 +52,15 @@ const chartOptions = {
 };
 
 export default class TopPage extends React.Component {
+
+  componentWillMount() {
+    chartData.datasets[1].data = this.props.top.myPoints;
+  }
+
   render() {
     return (
       <div>
+        <h3>こんにちは、{this.props.top.getMyName()}さん！</h3>
         <p>成長ポイント</p>
         <RaderChart
           data={chartData}
@@ -62,7 +68,7 @@ export default class TopPage extends React.Component {
           width={300}
           height={250}
         />
-        <p>登録中のタグ</p>
+        <p>登録中のトピック</p>
         <div style={m(style.chipDiv)}>
           <Chip style={m(style.chip)}>
             <Avatar size={32}>2</Avatar>

@@ -8,8 +8,7 @@ import PropTypes from 'prop-types'
 
 import NotFoundPage from '../components/pages/NotFoundPage';
 import MainContainer from './MainContainer';
-import HomeContainer from './HomeContainer';
-import LoginContainer from './LoginContainer';
+import HomePage from '../components/pages/HomePage';
 import ProjectContainer from './ProjectContainer'
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -39,7 +38,7 @@ class AppContainer extends React.Component {
           <StyleRoot>
             <Router history={history}>
               <Route path='/' component={MainContainer}>
-                <IndexRoute component={HomeContainer}/>
+                <IndexRoute component={HomePage}/>
                 <Route path='/project' component={ProjectContainer}/>
                 <Route path='*' component={NotFoundPage}/>
               </Route>

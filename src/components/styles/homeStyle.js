@@ -1,5 +1,7 @@
 /* @flow */
 
+import { palette } from '../styles/palette';
+
 export const homeStyle = {
   headline: {
     fontSize: 24,
@@ -7,7 +9,11 @@ export const homeStyle = {
     marginBottom: 12,
     fontWeight: 400,
   },
+  tabItem: {
+    color: palette.accent1Color,
+  },
   slide: {
+    height: '600px',
     padding: 10,
   },
 };

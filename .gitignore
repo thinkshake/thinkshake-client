@@ -162,6 +162,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# vscode directory
+.vscode
 
 # End of https://www.gitignore.io/api/node,macos,intellij+iml,linux
 

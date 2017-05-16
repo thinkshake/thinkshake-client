@@ -23,8 +23,8 @@ export default class ProjectCard extends React.Component {
       <div style={m(style.base)}>
         <Card>
           <CardHeader
-            title="プロジェクト名"
-            subtitle="トピック名"
+            title={this.props.name}
+            subtitle={this.props.topic}
             actAsExpander={true}
             showExpandableButton={true}
             avatar={Icon.userAvator}
@@ -32,12 +32,12 @@ export default class ProjectCard extends React.Component {
           <CardMedia>
             <Image alt="" src="images/sample.png" />
           </CardMedia>
-          <CardTitle title="プロジェクトの更新記事" />
+          <CardTitle title={this.props.title} />
           <CardActions>
-            <FlatButton secondary={true} label="ページに移動" onTouchTap={()=>this.handleTouchTap()}/>
+            <FlatButton label="ページに移動" labelStyle={m(style.button)} onTouchTap={()=>this.handleTouchTap()}/>
           </CardActions>
           <CardText expandable={true}>
-            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            {this.props.text}
           </CardText>
         </Card>
       </div>

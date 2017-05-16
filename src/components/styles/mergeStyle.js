@@ -2,7 +2,7 @@
 
 import { baseStyle } from './baseStyle';
 
-export const mergeStyle = (...args: any) => {
+export const mergeStyle = (...args: any): Object => {
   const res = {};
   Object.assign(res, baseStyle);
   args.forEach((arg) => {

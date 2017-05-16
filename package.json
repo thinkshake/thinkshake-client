@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "chart.js": "^2.4.0",
+    "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
     "material-ui": "0.16.4",
     "radium": "^0.18.1",
@@ -45,7 +46,7 @@
     "chai": "^3.5.0",
     "enzyme": "^2.6.0",
     "eslint": "^3.11.0",
-    "eslint-plugin-flow-vars": "^0.5.0",
+    "eslint-plugin-flowtype": "^2.32.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.7.1",
