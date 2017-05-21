@@ -1,15 +1,20 @@
 /* @flow */
 
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
-import HomePage from "../components/pages/HomePage";
+import HomePage from '../components/pages/HomePage';
 
-const mapStateToProps = () => {
-  return {};
+const mapStateToProps = (state) => {
+  return {
+    topics: {},
+    projects: {}
+  };
 };
 
-const mapDispatchToProps = () => {
-  return {};
+const mapDispatchToProps = (dispatch) => {
+  return {
+
+  };
 };
 
 const HomeContainer = connect(

@@ -1,46 +1,56 @@
 /* @flow */
 
 import React from "react";
-import { hashHistory } from 'react-router';
-// Components
-import Image from '../common/Image';
-import * as Icon from '../common/Icon';
-// UI
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
-// styles
-import { mergeStyle as m } from '../styles/mergeStyle';
-import { projectCardStyle as style } from '../styles/projectCardStyle';
+// import { hashHistory } from 'react-router';
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+// import FlatButton from 'material-ui/FlatButton';
+import PropTypes from 'prop-types'
 
 export default class ProjectCard extends React.Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
+    description: PropTypes.string,
+    photo: PropTypes.string.isRequired,
+    // showDetails: PropTypes.boolean
+  };
+  static defaultProps = {
+    showDetails: false
+  };
 
-  handleTouchTap() {
-    hashHistory.push('/project')
-  }
+  // TODO: タブに移動
+  // handleTouchTap() {
+  // hashHistory.push('/project')
+  // }
 
   render() {
     return (
-      <div style={m(style.base)}>
-        <Card>
-          <CardHeader
-            title="プロジェクト名"
-            subtitle="トピック名"
-            actAsExpander={true}
-            showExpandableButton={true}
-            avatar={Icon.userAvator}
-          />
-          <CardMedia>
-            <Image alt="" src="images/sample.png" />
-          </CardMedia>
-          <CardTitle title="プロジェクトの更新記事" />
-          <CardActions>
-            <FlatButton secondary={true} label="ページに移動" onTouchTap={()=>this.handleTouchTap()}/>
-          </CardActions>
-          <CardText expandable={true}>
-            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          </CardText>
-        </Card>
-      </div>
+      <Card>
+        <CardHeader
+          title={this.props.title}
+          subtitle={this.props.subtitle}
+          avatar={this.props.photo} // FIXME:  // TODO: デフォルト <Avatar style={m(style.userAvator)} icon={<SocialPerson />} />?
+        />
+        <CardTitle title={this.props.description}/>
+      </Card>
     );
   }
 }
+
+{/*<Card>*/}
+  {/*<CardHeader*/}
+    {/*title="プロジェクト名"*/}
+    {/*subtitle="トピック名"*/}
+    {/*// actAsExpander={true}*/}
+    {/*// showExpandableButton={true}*/}
+    {/*// avatar={Icon.userAvator}*/}
+    {/*avatar={"a"}*/}
+  {/*/>*/}
+  {/*/!*<CardMedia>*!/*/}
+  {/*/!*<Image alt='logo' src="images/sample.png"/>*!/*/}
+  {/*/!*</CardMedia>*!/*/}
+  {/*<CardTitle title="プロジェクトの更新記事"/>*/}
+  {/*/!*<CardText expandable={true}>*!/*/}
+  {/*/!*テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト*!/*/}
+  {/*/!*</CardText>*!/*/}
+{/*</Card>*/}

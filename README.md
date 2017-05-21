@@ -1,10 +1,10 @@
-ThinkShake Client
+Thinkshake Client
 ==========
 
-[Client for ThinkShake](https://?/)
+[Client for Thinkshake](https://?/)
 
 ## Description
-This is the client for ThinkShake.
+This is the client for Thinkshake.
 
 ## Demo
 

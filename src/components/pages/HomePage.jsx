@@ -1,69 +1,31 @@
 /* @flow */
 
-import React from "react";
-import SwipeableViews from 'react-swipeable-views';
-// Components
-import TopPage from '../pages/TopPage';
-import RecommendPage from '../pages/RecommendPage';
-import TopicPage from '../pages/TopicPage';
-// UI
-import RaisedButton from 'material-ui/RaisedButton';
-import {Tabs, Tab} from 'material-ui/Tabs';
-// styles
-import { mergeStyle as m } from '../styles/mergeStyle';
-import { homeStyle as style } from '../styles/homeStyle';
+import React from 'react';
+import TabList from '../layout/TabList';
+import TopPage from '../pages/home/TopPage';
+import TopicPage from '../pages/home/TopicPage';
 
 class HomePage extends React.Component {
-  state: Object;
 
   constructor(props: Object) {
     super(props);
-    this.state = {
-      slideIndex: 0,
-    };
   }
 
-  handleChange = (value: number) => {
-    this.setState({
-      slideIndex: value,
-    });
-  };
-
   render() {
+    // TODO: /top/:id によって初期表示変更
+    // TODO: topic の種類によって数が変化変化
+    const types = { 1: 'social', 2: 'politics', 3: 'sports' };
+    const topicPages = Object.keys(types).map((key) => {
+      return <TopicPage key={types[key]} title={types[key]} theme={types[key]}/>;
+    });
+    const tabs = [<TopPage title='top' key='top'/>].concat(topicPages);
+
     return (
-      <div>
-        <Tabs
-          onChange={this.handleChange}
-          value={this.state.slideIndex}
-        >
-          <Tab label="ホーム" value={0} />
-          <Tab label="おすすめ" value={1} />
-          <Tab label="社会" value={2} />
-          <Tab label="政治" value={3} />
-          <Tab label="スポーツ" value={4} />
-        </Tabs>
-        <SwipeableViews
-          index={this.state.slideIndex}
-          onChangeIndex={this.handleChange}
-        >
-          <div>
-            <TopPage />
-          </div>
-          <div style={style.slide}>
-            <RecommendPage />
-          </div>
-          <div style={style.slide}>
-            <TopicPage />
-          </div>
-          <div style={style.slide}>
-            <TopicPage />
-          </div>
-          <div style={style.slide}>
-            <TopicPage />
-          </div>
-        </SwipeableViews>
-      </div>
+      <TabList>
+        {tabs}
+      </TabList>
     );
+
   }
 }
 
