@@ -1,12 +1,15 @@
 import React from 'react';
+import Radium from 'radium';
 import TextField from 'material-ui/TextField';
 import IconButton from 'material-ui/IconButton';
 import SearchIcon from 'material-ui/svg-icons/action/search';
 import PropTypes from 'prop-types'
 
+@Radium
 class SearchTextField extends React.Component {
   static propTypes = {
-    onEnterKey: PropTypes.func
+    onEnterKey: PropTypes.func,
+    style: PropTypes.object
   };
 
   _onKeyPress = (event) => {
@@ -24,6 +27,7 @@ class SearchTextField extends React.Component {
           id="text-field-search"
           hintText="Search"
           onKeyPress={this._onKeyPress}
+          style={this.props.style}
         />
         <IconButton><SearchIcon /></IconButton>
       </div>

@@ -1,6 +1,7 @@
 /* @flow */
 
 import React from 'react';
+
 import TabList from '../layout/TabList';
 import TopPage from '../pages/home/TopPage';
 import TopicPage from '../pages/home/TopicPage';

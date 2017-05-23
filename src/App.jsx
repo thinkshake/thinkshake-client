@@ -4,8 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { hashHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
-import RootContainer from './containers/RootContainer';
 
+import RootContainer from './redux/containers/RootContainer';
 import store from './redux/store';
 
 const history = syncHistoryWithStore(hashHistory, store);

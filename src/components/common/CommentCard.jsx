@@ -21,7 +21,11 @@ export default class CommentCard extends React.Component {
   render() {
     // TODO: 順番をname,comment,childrenの順番にする
     return (
-      <ListItem secondaryText={this.props.comment} leftAvatar={<Avatar src={this.props.photo} />}>
+      <ListItem
+        disabled={true} 
+        secondaryText={this.props.comment}
+        leftAvatar={<Avatar src={this.props.photo} />}
+      >
         {this.props.fullname}
         {this.props.children}
       </ListItem>

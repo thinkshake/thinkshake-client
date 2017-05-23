@@ -1,11 +1,13 @@
-/* Actionsの実装 */
+// @flow
+
+import { List } from 'immutable';
+// import Topic from '../../domains/Topic'
 
 // Action名の定義
-const ADD_COMMENT = 'ADD_COMMENT';
+const ADD_COMMENT = 'topic/ADD_COMMENT';
 
 // Action Creators
 function addComment(comment) {
-  // Action
   return {
     type: ADD_COMMENT,
     comment,
@@ -14,14 +16,11 @@ function addComment(comment) {
 export const actions = { addComment };
 
 /* Reducersの実装 */
-
-// TODO: state = []
-export function appReducer(state = [], action) {
+const init = List([]);
+export function topicReducer(state = init, action) {
   switch (action.type) {
     case ADD_COMMENT:
-      return Object.assign({}, state, {
-        comment: action.comment,
-      });
+      return state.push(action.comment);
     default:
       return state;
   }

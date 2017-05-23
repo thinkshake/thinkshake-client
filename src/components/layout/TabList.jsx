@@ -5,6 +5,7 @@ import SwipeableViews from 'react-swipeable-views';
 import { Tabs, Tab } from 'material-ui/Tabs';
 import PropTypes from 'prop-types'
 // import { hashHistory } from 'react-router';
+import { tabListStyle as style } from './tabListStyle';
 
 class TabList extends React.Component {
   static propTypes = {
@@ -30,7 +31,7 @@ class TabList extends React.Component {
 
   render() {
     const tabs = this.props.children.map((child, i) => {
-      return <Tab label={child.props.title} key={i} value={i}/>;
+      return <Tab label={child.props.title} style={style.tab} key={i} value={i}/>;
     });
 
     return (

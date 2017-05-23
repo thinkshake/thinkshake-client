@@ -27,9 +27,7 @@ class TopicPage extends React.Component {
     const comments = [
       <CommentCard key={'uniqueid'} fullname={'A'} username={'username'} comment={'comment'} photo={'./avator.png'}/>,
       <CommentCard key={'uniqueid2'} fullname={'A'} username={'username'} comment={'create project'} photo={'./avator.png'}>
-        <ProjectCard title={'project title'} subtitle={'project subtitle'}
-                     description={'project description'}
-                     photo={'./photo'}/>
+        <ProjectCard title={'project title'} topic={'project subtitle'} description={'project description'} />
       </CommentCard>
     ];
 

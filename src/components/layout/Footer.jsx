@@ -1,10 +1,11 @@
 /* @flow */
 
 import React from "react";
+import PropTypes from 'prop-types'
 import Paper from 'material-ui/Paper';
+
 import CommentTextField from '../forms/CommentTextField';
 import style from './footerStyle';
-import PropTypes from 'prop-types'
 
 class Footer extends React.Component {
   static propTypes = {

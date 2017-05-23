@@ -2,7 +2,7 @@
 
 import { connect } from 'react-redux';
 
-import HomePage from '../components/pages/HomePage';
+import HomePage from '../../components/pages/HomePage';
 
 const mapStateToProps = (state) => {
   return {

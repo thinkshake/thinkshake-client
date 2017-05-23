@@ -3,25 +3,26 @@
 import React from "react";
 import MenuItem from "material-ui/MenuItem";
 import IconButton from "material-ui/IconButton";
-import NotificationsIcon from "material-ui/svg-icons/social/notifications";
+import { Toolbar, ToolbarGroup } from "material-ui/Toolbar";
+import Divider from 'material-ui/Divider';
+
 import DrawerButton from "../common/DrawerButton";
 import ProfileCard from "../common/ProfileCard";
-import SearchTextField from "../forms/SearchTextField";
 import Logo from "../common/Logo";
-import { Toolbar, ToolbarGroup } from "material-ui/Toolbar";
+import * as Icon from "../common/Icon";
+import SearchTextField from "../forms/SearchTextField";
 import { headerStyle as style } from './headerStyle';
-import Divider from 'material-ui/Divider';
 
 class Header extends React.Component {
   render() {
     return (
-      <Toolbar style={style}>
+      <Toolbar style={style.nav}>
         <ToolbarGroup firstChild={true}>
-          <Logo/>
-          <SearchTextField/>
+          <Logo style={style.logo} />
+          <SearchTextField style={style.search}/>
         </ToolbarGroup>
         <ToolbarGroup>
-          <IconButton><NotificationsIcon /></IconButton>
+          <IconButton>{Icon.notifications}</IconButton>
           <DrawerButton>
             <ProfileCard fullname="f" username="u" photo="a"/>
             {/* TODO: 実行できない this.handleClose*/}

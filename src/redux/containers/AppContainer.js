@@ -2,11 +2,10 @@
 
 import { connect } from 'react-redux';
 
-import App from '../components/layout/App';
-import { actions } from '../redux/modules/app';
+import App from '../../components/layout/App';
+import { actions as topActions } from '../modules/top';
 
 const mapStateToProps = (state) => {
-  console.log(state);
 
   return {
     // comment: state.comment,
@@ -18,7 +17,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch,) => {
   return {
     addComment(comment) {
-      dispatch(actions.addComment(comment));
+      dispatch(topActions.addComment(comment));
     },
   };
 };
