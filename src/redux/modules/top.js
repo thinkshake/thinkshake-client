@@ -8,8 +8,7 @@ const LOAD_TOP = 'top/LOAD_TOP';
 
 // Action Creators
 function loadTop(userId: string) {
-  const nav: Navigation = new Navigation();
-  const projects: Object[] = nav.loadTop(userId);
+  const projects: Object[] = Navigation.loadTop(userId);
   return {
     type: LOAD_TOP,
     projects,

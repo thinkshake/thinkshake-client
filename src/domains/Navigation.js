@@ -35,4 +35,4 @@ class Navigation {
   }
 
 }
-export default Navigation;
+export default new Navigation();
