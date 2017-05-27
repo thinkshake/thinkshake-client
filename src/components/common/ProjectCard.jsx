@@ -1,10 +1,10 @@
 /* @flow */
 
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types'
 import { hashHistory } from 'react-router';
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
-import PropTypes from 'prop-types'
 
 import { projectCardStyle as style } from './projectCardStyle';
 
@@ -13,6 +13,7 @@ export default class ProjectCard extends React.Component {
     title: PropTypes.string.isRequired,
     topic: PropTypes.string,
     description: PropTypes.string,
+    image: PropTypes.string,
   };
   static defaultProps = {
     showDetails: false
@@ -32,7 +33,7 @@ export default class ProjectCard extends React.Component {
             subtitle={this.props.topic}
           />
           <CardMedia>
-            <img alt="" src="images/sample.png" />
+            <img alt="" src={this.props.image} />
           </CardMedia>
           <CardTitle title={this.props.description} />
           <CardActions>

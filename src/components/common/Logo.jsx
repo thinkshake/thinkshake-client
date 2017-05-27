@@ -1,8 +1,8 @@
 /* @flow */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import PropTypes from 'prop-types'
 
 @Radium
 class Logo extends React.Component {

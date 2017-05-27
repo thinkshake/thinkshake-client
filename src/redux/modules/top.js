@@ -1,26 +1,54 @@
 // @flow
 
-import { List } from 'immutable';
-// import Top from '../../domains/Top'
+// import { Record } from 'immutable';
+import Navigation from '../../domains/Navigation'
 
 // Action名の定義
-// const SAMPLE_ACTION = 'top/SAMPLE_ACTION';
+const LOAD_TOP = 'top/LOAD_TOP';
 
 // Action Creators
-// function sampleAction(payload) {
-//   return {
-//     type: SAMPLE_ACTION,
-//     payload,
-//   };
-// }
-// export const actions = { sampleAction };
+function loadTop(userId: string) {
+  const nav: Navigation = new Navigation();
+  const projects: Object[] = nav.loadTop(userId);
+  return {
+    type: LOAD_TOP,
+    projects,
+  };
+}
+export const actions = { loadTop };
 
 /* Reducersの実装 */
-const init = List([]);
+const init = {
+  projects: [
+    {
+      id: 'init',
+      title: 'init',
+      topic: 'init',
+      description: 'init',
+      image: 'images/sample.png',
+    },
+  ],
+};
+// const init = Record({
+//   projects: [
+//     {
+//       id: 'init',
+//       title: 'init',
+//       topic: 'init',
+//       description: 'init',
+//       image: 'images/sample.png',
+//     },
+//   ],
+// });
+
 export function topReducer(state = init, action) {
   switch (action.type) {
-    // case SAMPLE_ACTION:
-    //   return state.push(action.payload);
+    case LOAD_TOP:
+      // return state.set('projects', action.projects);
+      return Object.assign({}, state, {
+                  projects: action.projects,
+              });
+
     default:
       return state;
   }

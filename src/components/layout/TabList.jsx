@@ -1,9 +1,9 @@
 /* @flow */
 
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import { Tabs, Tab } from 'material-ui/Tabs';
-import PropTypes from 'prop-types'
 // import { hashHistory } from 'react-router';
 import { tabListStyle as style } from './tabListStyle';
 

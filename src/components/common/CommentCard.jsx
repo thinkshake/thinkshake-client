@@ -1,9 +1,9 @@
 /* @flow */
 
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 // import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import { ListItem} from 'material-ui/List';
-import PropTypes from 'prop-types'
 import Avatar from 'material-ui/Avatar';
 
 export default class CommentCard extends React.Component {

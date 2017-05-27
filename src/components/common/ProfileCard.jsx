@@ -1,6 +1,8 @@
+/* @flow */
+
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Card, CardHeader } from 'material-ui/Card';
-import PropTypes from 'prop-types'
 
 class ProfileCard extends React.Component {
   static propTypes = {

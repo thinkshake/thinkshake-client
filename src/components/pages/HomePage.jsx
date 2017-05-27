@@ -1,12 +1,18 @@
 /* @flow */
 
 import React from 'react';
+import PropTypes from 'prop-types'
 
 import TabList from '../layout/TabList';
 import TopPage from '../pages/home/TopPage';
 import TopicPage from '../pages/home/TopicPage';
 
 class HomePage extends React.Component {
+
+  static propTypes = {
+    projects: PropTypes.arrayOf(PropTypes.object),
+    loadTop: PropTypes.func,
+  };
 
   constructor(props: Object) {
     super(props);
@@ -19,7 +25,11 @@ class HomePage extends React.Component {
     const topicPages = Object.keys(types).map((key) => {
       return <TopicPage key={types[key]} title={types[key]} theme={types[key]}/>;
     });
-    const tabs = [<TopPage title='top' key='top'/>].concat(topicPages);
+    const tabs = [<TopPage
+                    key='top'
+                    title='top'
+                    projects={this.props.projects}
+                    loadTop={this.props.loadTop} />].concat(topicPages);
 
     return (
       <TabList>
