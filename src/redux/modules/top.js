@@ -28,6 +28,7 @@ const init = {
     },
   ],
 };
+// TODO: immutable.jsを使用する
 // const init = Record({
 //   projects: [
 //     {

@@ -15,9 +15,9 @@ export default class ProjectCard extends React.Component {
     description: PropTypes.string,
     image: PropTypes.string,
   };
-  static defaultProps = {
-    showDetails: false
-  };
+  // static defaultProps = {
+  //   showDetails: false
+  // };
 
   // TODO: タブに移動
   handleTouchTap() {

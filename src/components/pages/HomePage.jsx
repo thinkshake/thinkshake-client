@@ -10,8 +10,10 @@ import TopicPage from '../pages/home/TopicPage';
 class HomePage extends React.Component {
 
   static propTypes = {
+    comments: PropTypes.arrayOf(PropTypes.object),
     projects: PropTypes.arrayOf(PropTypes.object),
     loadTop: PropTypes.func,
+    loadComments: PropTypes.func,
   };
 
   constructor(props: Object) {
@@ -23,7 +25,13 @@ class HomePage extends React.Component {
     // TODO: topic の種類によって数が変化変化
     const types = { 1: 'social', 2: 'politics', 3: 'sports' };
     const topicPages = Object.keys(types).map((key) => {
-      return <TopicPage key={types[key]} title={types[key]} theme={types[key]}/>;
+      return <TopicPage
+              key={types[key]}
+              title={types[key]}
+              theme={types[key]}
+              comments={this.props.comments}
+              loadComments={this.props.loadComments}
+             />;
     });
     const tabs = [<TopPage
                     key='top'

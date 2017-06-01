@@ -15,8 +15,8 @@ export default class ProjectPage extends React.Component {
         <h1>プロジェクトタイトル</h1>
         <div style={style.userBox}>
           <p>メンバー</p>
-          {Icon.userIcon}
-          {Icon.userIcon}
+          {Icon.user}
+          {Icon.user}
           <FlatButton secondary={true} label={'参加する'} />
         </div>
         <div>
@@ -28,16 +28,16 @@ export default class ProjectPage extends React.Component {
         </div>
         <Paper style={style.talk}>
           <List>
-            <ListItem secondaryText={'Aさん'} leftIcon={Icon.userIcon}>
+            <ListItem secondaryText={'Aさん'} leftIcon={Icon.user}>
               テキストテキストテキストテキスト
             </ListItem>
-            <ListItem secondaryText={'Bさん'} leftIcon={Icon.userIcon}>
+            <ListItem secondaryText={'Bさん'} leftIcon={Icon.user}>
               テキストテキストテキストテキスト
             </ListItem>
-            <ListItem secondaryText={'Cさん'} leftIcon={Icon.userIcon}>
+            <ListItem secondaryText={'Cさん'} leftIcon={Icon.user}>
               テキストテキストテキストテキスト
             </ListItem>
-            <ListItem secondaryText={'Bさん'} leftIcon={Icon.userIcon}>
+            <ListItem secondaryText={'Bさん'} leftIcon={Icon.user}>
               テキストテキストテキストテキスト
             </ListItem>
           </List>

@@ -9,7 +9,7 @@ import Footer from "./Footer";
 class App extends React.Component {
   static propTypes = {
     children: PropTypes.object.isRequired,
-    addComment: PropTypes.func.isRequired
+    addComment: PropTypes.func.isRequired,
   };
 
   render() {
@@ -19,7 +19,7 @@ class App extends React.Component {
         <div>
           { this.props.children }
         </div>
-        <Footer onCommentEnterKey={this.props.addComment}/>
+        <Footer addComment={this.props.addComment}/>
       </div>
     );
   }

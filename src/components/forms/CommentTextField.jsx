@@ -1,37 +1,60 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import TextField from 'material-ui/TextField';
 import IconButton from 'material-ui/IconButton';
-import EmotionIcon from 'material-ui/svg-icons/editor/insert-emoticon';
+
+import  * as Icon  from '../common/Icon';
 import style from './commentTextFieldStyle';
-import PropTypes from 'prop-types'
 
 class CommentTextField extends React.Component {
   static propTypes = {
-    onEnterKey: PropTypes.func
+    addComment: PropTypes.func,
+    onEnterKey: PropTypes.func,
   };
 
-  _onKeyPress = (event) => {
-    if (event.charCode === 13) {
-      event.preventDefault();
-      if (this.props.onEnterKey) this.props.onEnterKey(event);
-    }
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      comment: '',
+    };
+  }
+
+  // _onKeyPress = (event) => {
+  //   if (event.charCode === 13) {
+  //     event.preventDefault();
+  //     if (this.props.onEnterKey) this.props.onEnterKey(event);
+  //   }
+  // };
+
+  addComment = () => {
+    this.props.addComment(this.state.comment);
+    this.setState({
+      comment: '',
+    });
+  }
+
+  changeComment = (event) => {
+    event.preventDefault();
+    this.setState({
+      comment: event.target.value,
+    });
+  }
 
   render() {
+    // gridをつかった形に変更する
     return (
       <div>
-        {/* TODO: padding がうまく適用されない */}
         <TextField
           id="text-field-comment"
           hintText="Comment"
           fullWidth={true}
           multiLine={true}
-          onKeyPress={this._onKeyPress}
-          style={{ padding: '0 -50px 0 0' }}
-          inputStyle={{ padding: '0 -50px 0 0' }}
-          textareaStyle={{ padding: '0 -50px 0 0' }}
+          style={style.textField}
+          onChange={this.changeComment}
+          value={this.state.comment}
         />
-        <IconButton style={style.IconButton}><EmotionIcon /></IconButton>
+        <IconButton style={style.IconButton}>{Icon.emotion}</IconButton>
+        <IconButton style={style.IconButton} onTouchTap={this.addComment}>{Icon.send}</IconButton>
       </div>
     );
   }

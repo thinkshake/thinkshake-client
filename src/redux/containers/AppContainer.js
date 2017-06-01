@@ -3,7 +3,7 @@
 import { connect } from 'react-redux';
 
 import App from '../../components/layout/App';
-import { actions as topActions } from '../modules/top';
+import { actions as topicActions } from '../modules/topic';
 
 const mapStateToProps = (state) => {
 
@@ -14,10 +14,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch,) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     addComment(comment) {
-      dispatch(topActions.addComment(comment));
+      dispatch(topicActions.addComment(comment));
     },
   };
 };

@@ -8,9 +8,9 @@ import Avatar from 'material-ui/Avatar';
 
 export default class CommentCard extends React.Component {
   static propTypes = {
-    fullname: PropTypes.string.isRequired,
-    username: PropTypes.string.isRequired,
-    photo: PropTypes.string.isRequired,
+    fullName: PropTypes.string.isRequired,
+    userName: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
     comment: PropTypes.string.isRequired,
     children: PropTypes.object
     // children: PropTypes.array
@@ -24,9 +24,9 @@ export default class CommentCard extends React.Component {
       <ListItem
         disabled={true} 
         secondaryText={this.props.comment}
-        leftAvatar={<Avatar src={this.props.photo} />}
+        leftAvatar={<Avatar src={this.props.image} />}
       >
-        {this.props.fullname}
+        {this.props.fullName}
         {this.props.children}
       </ListItem>
     );

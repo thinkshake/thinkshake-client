@@ -9,7 +9,8 @@ import style from './footerStyle';
 
 class Footer extends React.Component {
   static propTypes = {
-    onCommentEnterKey: PropTypes.func.isRequired
+    onCommentEnterKey: PropTypes.func.isRequired,
+    addComment: PropTypes.func,
   };
 
   render() {
@@ -17,7 +18,7 @@ class Footer extends React.Component {
       <div>
         {/* TODO: 表示する必要がある画面のみ表示する */}
         <Paper style={style}>
-          <CommentTextField onEnterKey={this.props.onCommentEnterKey}/>
+          <CommentTextField onEnterKey={this.props.onCommentEnterKey} addComment={this.props.addComment} />
         </Paper>
       </div>
     );

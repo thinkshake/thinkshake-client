@@ -1,10 +1,13 @@
 /* @flow */
 
 const style = {
-  TextField: {},
+  textField: {
+    width: '70%',
+    margin: '0 0 0 10px',
+  },
   IconButton: {
-    position: 'absolute',
-    right: 0
+    // marginLeft: 'auto',
+    textAlign: 'right',
   }
 };
 

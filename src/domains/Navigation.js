@@ -34,5 +34,41 @@ class Navigation {
     ];
   }
 
+  loadComments: Object[] = (topicId: string) => {
+    //  TODO: プロパティじゃなくて型定義を使いたい
+    //        hasChildは使わず、返却した配列をみて判断させたい
+    const commentWithoutChild = {
+      type: 'comment',
+      id: 'id1',
+      fullName: 'fullName1',
+      userName: 'userName1',
+      image: 'images/sampleUser.png',
+      comment: 'Hello, this is my comment. No child.',
+      hasChild: false,
+    };
+    const commentWithChild = {
+      type: 'comment',
+      id: 'id2',
+      fullName: 'fullName2',
+      userName: 'userName2',
+      image: 'images/sampleUser.png',
+      comment: 'Hello, this is my comment. With child.',
+      hasChild: true,
+    };
+    const project = {
+      type: 'project',
+      id: 'id3',
+      title: 'title1',
+      topic: 'topic1',
+      description: 'description1',
+      image: 'images/sample.png',
+    };
+    return [
+      commentWithChild,
+      project,
+      commentWithoutChild,
+    ];
+  }
+
 }
 export default new Navigation();
